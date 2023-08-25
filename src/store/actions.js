@@ -6,3 +6,8 @@ export function searchMeals({commit},keyword){
     })
 
 }
+export function searchMealsByIngredient({commit},ing){
+    axiosClient.get(`filter.php?i=${ing}`).then(({data}) =>{
+        commit('setMealsByIngredient',data.meals)
+    })
+}

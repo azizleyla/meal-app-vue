@@ -3,7 +3,7 @@
 
     <MealItem v-for="meal of props.meals" :key="meal.idMeal" :meal="meal" />
   </div>
-  <div v-if="!props.meals.length" class="flex justify-center text-gray-600 p-8">
+  <div v-if="!props.meals?.length" class="flex justify-center text-gray-600 p-8">
     There are no meals
   </div>
 </template>
